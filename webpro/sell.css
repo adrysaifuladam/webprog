@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f5fa;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #f03e9d;
+}
+
+h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+main {
+  padding: 40px;
+}
+
+.create-item-form {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.photo-section .photo-placeholder {
+  width: 250px;
+  height: 250px;
+  background-color: #e4e6eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.photo-placeholder span {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.input-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-section label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.input-section input,
+.input-section textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 14px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.radio-options {
+  display: flex;
+  gap: 10px;
+}
+
+.radio-options input[type="radio"] {
+  accent-color: #f03e9d;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel,
+.create {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.create {
+  background-color: #f03e9d;
+  color: white;
+}

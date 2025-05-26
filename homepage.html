@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Homepage</title>
+  <link rel="stylesheet" href="homepage.css" />
+  <style>
+    body {
+      transition: transform 0.5s ease-in-out;
+    }
+
+    body.slide-out {
+      transform: translateX(-100%);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/image/logo.jpg" alt="Logo" height="40">
+    </div>
+    <nav>
+      <a href="homepage.html" class="active">Shopping</a>
+      <a href="#" id="sell-link">Sell</a>
+    </nav>
+    <a href="profile.html" class="user-info">
+  <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="User" class="avatar">
+  <span>ADRY SAIFUL</span>
+</a>
+
+  </header>
+
+  <main>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+      <button>Go</button>
+    </div>
+
+    <section class="product-grid">
+      <div class="product">
+        <img src="/image/blouse.png" alt="Blouse">
+        <h3>Blouse</h3>
+        <p class="price">RM30</p>
+      </div>
+      <div class="product">
+        <img src="/image/bantalbusuk.png" alt="Bantal Peluk">
+        <h3>Bantal Peluk</h3>
+        <p class="free">FREE</p>
+      </div>
+      <div class="product">
+        <img src="/image/kainselimut.png" alt="Kain Selimut">
+        <h3>Kain Selimut</h3>
+        <p class="free">FREE</p>
+      </div>
+      <div class="product">
+        <img src="/image/dress.png" alt="Dress">
+        <h3>Dress</h3>
+        <p class="price">RM79</p>
+      </div>
+      <div class="product">
+        <img src="/image/knitwearpink.png" alt="Knitwear Pink">
+        <h3>Knitwear Pink</h3>
+        <p class="price">RM20</p>
+      </div>
+      <div class="product">
+        <img src="/image/babyshoes.png" alt="Baby Shoes">
+        <h3>Baby Shoes</h3>
+        <p class="price">RM50</p>
+      </div>
+      <div class="product">
+        <img src="/image/tshirt.png" alt="Pink T-Shirt">
+        <h3>Pink T-Shirt</h3>
+        <p class="price">RM19</p>
+      </div>
+      <div class="product">
+        <img src="/image/teddybear.png" alt="Teddy Bear">
+        <h3>Teddy Bear</h3>
+        <p class="free">FREE</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+
+    const sellLink = document.getElementById("sell-link");
+    sellLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.classList.add("slide-out");
+      setTimeout(() => {
+        window.location.href = "sell.html";
+      }, 500);
+    });
+
+
+    const searchInput = document.querySelector(".search-bar input");
+    const searchButton = document.querySelector(".search-bar button");
+    const products = document.querySelectorAll(".product");
+
+    searchButton.addEventListener("click", () => {
+      const keyword = searchInput.value.toLowerCase().trim();
+
+      products.forEach(product => {
+        const name = product.querySelector("h3").textContent.toLowerCase();
+        if (name.includes(keyword)) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    });
+
+  
+    searchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        searchButton.click();
+      }
+    });
+  </script>
+</body>
+</html>

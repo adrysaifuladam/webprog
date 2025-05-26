@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  transform: translateX(100%);
+  animation: slideIn 0.5s forwards ease-in-out;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0%);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #f03e9d;
+}
+
+.profile-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-nav span {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.active-tab {
+  color: #f03e9d;
+  font-weight: bold;
+  border-bottom: 2px solid #f03e9d;
+}
+
+nav .user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav .user-info .avatar {
+  vertical-align: middle;
+}
+
+.container {
+  padding: 30px;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.profile-info {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+
+.edit-btn,
+.logout-btn {
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-btn {
+  background-color: #f03e9d;
+  color: white;
+}
+
+.logout-btn {
+  background-color: #ccc;
+  color: black;
+}
+
+.listing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sell-btn {
+  background-color: #f03e9d;
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.listings {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.item {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.item p {
+  margin: 10px 0 0;
+  font-weight: bold;
+}
+
+.item span {
+  color: gray;
+}

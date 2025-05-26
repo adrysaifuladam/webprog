@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Item</title>
+  <link rel="stylesheet" href="sell.css" />
+  <style>
+    body {
+      transform: translateX(100%);
+      animation: slideIn 0.5s forwards ease-in-out;
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateX(0%);
+      }
+    }
+
+    header a img {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="homepage.html">
+      <img src="/image/logo.jpg" alt="Logo" height="40">
+    </a>
+    <h2>Create Item</h2>
+    <a href="profile.html" class="user-info">
+  <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="User" class="avatar">
+  <span>ADRY SAIFUL</span>
+</a>
+
+  </header>
+
+  <main>
+    <form class="create-item-form">
+      <div class="photo-section">
+        <div class="photo-placeholder">
+          <span>+</span>
+          <p>SELECT PHOTO</p>
+        </div>
+      </div>
+
+      <div class="input-section">
+        <label>Item Name</label>
+        <input type="text" name="itemName" />
+
+        <label>Price</label>
+        <div class="price-row">
+          <input type="text" name="price" value="100"/>
+          <div class="radio-options">
+            <label><input type="radio" name="type" checked /> SELL</label>
+            <label><input type="radio" name="type" /> DONATE</label>
+          </div>
+        </div>
+
+        <label>Description</label>
+        <textarea name="description" rows="3"></textarea>
+
+        <label>Condition</label>
+        <input type="text" name="condition" />
+
+        <label>Delivery Fee (RM)</label>
+        <input type="text" name="deliveryFee" />
+
+        <label>Category</label>
+        <input type="text" name="category" />
+
+        <div class="form-buttons">
+          <button type="button" class="cancel">Cancel</button>
+          <button type="submit" class="create">Create</button>
+        </div>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
