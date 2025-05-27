@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Profile</title>
+  <link rel="stylesheet" href="editprofile.css" />
+</head>
+<body>
+  <div class="edit-container">
+    <h1>Edit Profile</h1>
+
+    <div class="profile-photo-section">
+      <div class="photo-preview">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profile Photo" />
+      </div>
+      <div class="upload-info">
+        <h2>Upload your photo</h2>
+        <p></p>
+        <input type="file" name="profileImage" accept="image/png, image/jpeg" />
+      </div>
+    </div>
+
+    <form class="profile-form" action="save-profile.php" method="POST" enctype="multipart/form-data">
+      <label>Full Name</label>
+      <input type="text" name="fullName" required />
+
+      <label>Email</label>
+      <input type="email" name="email" required />
+
+      <label>Phone Number</label>
+      <input type="tel" name="phone" required />
+
+      <label>Address</label>
+      <input type="text" name="address" required />
+
+      <label>About Me</label>
+      <textarea name="about" rows="4"></textarea>
+
+      <div class="form-buttons">
+        <button type="button" class="cancel-btn" onclick="window.location.href='profile.html'">Cancel</button>
+        <button type="submit" class="save-btn">Save</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

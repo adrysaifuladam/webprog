@@ -147,3 +147,19 @@ nav .user-info .avatar {
 .item span {
   color: gray;
 }
+.edit-btn {
+  display: inline-block;
+  background-color: #f472b6;
+  color: white;
+  padding: 10px 16px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.edit-btn:hover {
+  background-color: #ec4899;
+}
+
