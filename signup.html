@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BELIBALIK Sign Up</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="logo-section">
+      <img src="belibalik.jpg" alt="BELIBALIK Logo" class="logo" />
+    </div>
+
+    <div class="signup-box">
+      <h2>Let's Get Going.</h2>
+      <p>Create an account</p>
+      <form id="signupForm">
+        <input type="text" placeholder="Username" required />
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="+60" required />
+        <input type="password" placeholder="Enter your password" required />
+
+        <div class="radio-group">
+          <label><input type="radio" name="role" value="student" required /> UTeM Student</label><br>
+          <label><input type="radio" name="role" value="staff" required /> UTeM Staff</label>
+        </div>
+
+        <button type="submit">Continue</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Account created (demo only)");
+      // You can later redirect or send data to backend here
+    });
+  </script>
+</body>
+</html>
