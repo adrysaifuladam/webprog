@@ -1,130 +1,68 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f5f5fa;
-}
-
-header {
+  background: #f7f7f7;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #f03e9d;
-}
-
-h2 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-
-main {
-  padding: 40px;
-}
-
-.create-item-form {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.photo-section .photo-placeholder {
-  width: 250px;
-  height: 250px;
-  background-color: #e4e6eb;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px dashed #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  color: #333;
-  cursor: pointer;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.photo-placeholder span {
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.input-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.input-section label {
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-.input-section input,
-.input-section textarea {
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+form {
+  position: relative;
+  background: white;
+  padding: 40px 30px 30px;
+  max-width: 400px;
   width: 100%;
-  font-size: 14px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
-.price-row {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+
+h5 {
+  position: absolute;
+  top: -0.6em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0 10px;
+  font-size: 17px;
+  line-height: 1;
+  color: #333;
+  font-weight: 500;
 }
 
-.radio-options {
-  display: flex;
-  gap: 10px;
-}
 
-.radio-options input[type="radio"] {
-  accent-color: #f03e9d;
-}
 
-.form-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.cancel,
-.create {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.cancel {
-  background: #fff;
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
   border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
-.create {
-  background-color: #f03e9d;
+input:focus,
+textarea:focus {
+  border-color: #ee3e75;
+  outline: none;
+}
+
+button {
+  background-color: #ee3e75;
   color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d13568;
 }
