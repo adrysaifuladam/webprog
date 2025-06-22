@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register - BELIBALIK</title>
+  <link rel="stylesheet" href="login.css">
+  <style>
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      margin: 10px 0;
+      justify-content: center;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .radio-option input {
+      margin-right: 6px;
+    }
+
+    .form-label {
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="logo-section">
+    <img src="belibalik.jpg" alt="BELIBALIK Logo" class="logo" />
+  </div>
+
+  <div class="container" style="justify-content: center;">
+    <div class="login-box">
+      <h2>Create an Account</h2>
+
+      <form method="POST" action="save_user.php">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone number" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <!-- User Type (Staff/Student) -->
+        <div class="form-label">Select User Type:</div>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="user_type" value="student" required> Student
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="user_type" value="staff"> Staff
+          </label>
+        </div>
+
+        <label style="font-size: 14px;">
+          <input type="checkbox" name="is_admin" value="1"> I am an Admin
+        </label>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <p>Already have an account? <a href="index.php">Login here</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
