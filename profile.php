@@ -9,10 +9,10 @@ if (!isset($_SESSION['username'])) {
 
 $username = $_SESSION['username'];
 
-// ✅ Fixed column name: profile_picture (not profile_pic)
+
 $stmt = $conn->prepare("SELECT id, username, email, phone, profile_picture FROM users WHERE username = ?");
 if (!$stmt) {
-    die("Prepare failed: " . $conn->error); // Help debug if it fails again
+    die("Prepare failed: " . $conn->error); 
 }
 $stmt->bind_param("s", $username);
 $stmt->execute();
