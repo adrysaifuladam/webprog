@@ -9,7 +9,7 @@ if (!isset($_GET['id']) || !isset($_SESSION['username'])) {
 
 $product_id = $_GET['id'];
 $buyer = $_SESSION['username'];
-$current_time = date("Y-m-d H:i:s"); // capture purchase time
+$current_time = date("Y-m-d H:i:s"); 
 
 
 $stmt = $conn->prepare("SELECT * FROM product WHERE id = ?");
