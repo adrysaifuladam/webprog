@@ -24,13 +24,13 @@ $result = $stmt->get_result();
 $user = $result->fetch_assoc();
 $currentProfilePic = $user['profile_picture'];
 
-// Handle form submission
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $newPassword = $_POST['password'];
 
-    // Handle file upload
+    
     $profilePicPath = $currentProfilePic;
     if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === UPLOAD_ERR_OK) {
         $targetDir = "uploads/";
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         move_uploaded_file($_FILES["profile_picture"]["tmp_name"], $profilePicPath);
     }
 
-    // Update query
+   
     if (!empty($newPassword)) {
         $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
         $stmt = $conn->prepare("UPDATE users SET email = ?, phone = ?, password = ?, profile_picture = ? WHERE username = ?");
