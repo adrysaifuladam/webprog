@@ -8,16 +8,14 @@ if (!isset($_GET['id'])) {
 
 $product_id = $_GET['id'];
 
-// Assume payment is successful at this point (QR or cash logic done)
 
-// Mark as sold
 $update = $conn->prepare("UPDATE product SET status = 'sold' WHERE id = ?");
 $update->bind_param("i", $product_id);
 $update->execute();
 
 $conn->close();
 
-// Redirect to success page or back to home
+
 header("Location: home.php");
 exit();
 
